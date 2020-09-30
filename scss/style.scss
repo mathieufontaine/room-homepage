@@ -1,5 +1,7 @@
 @import "utilities";
 @import "navbar";
+@import "buttons";
+@import "slider";
 
 .showcase,
 .about {
@@ -8,6 +10,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 // showcase
@@ -29,7 +32,7 @@
     position: relative;
     height: 100%;
     .content {
-      height: 100%;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -37,34 +40,6 @@
       padding: 70px;
     }
   }
-}
-
-.slider-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slider-item {
-  display: none;
-  height: 100%;
-  width: 100%;
-}
-
-.showcase-img {
-  .slider-item.active {
-    display: block !important;
-  }
-}
-
-.showcase-content {
-  .slider-item.active {
-    display: flex !important;
-  }
-}
-
-.show {
-  display: flex !important;
 }
 
 // about
@@ -101,34 +76,6 @@
 }
 #img5 {
   background-image: url("/public/img/image-about-light.jpg");
-}
-
-// buttons
-
-.btn-shop {
-  cursor: pointer;
-  padding: 20px 0;
-  margin-right: auto;
-  display: flex;
-  h3 {
-    margin-right: 30px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-weight: 300;
-    &:hover {
-      color: $dark-gray;
-    }
-  }
-}
-
-.btn-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  height: 70px;
-  width: 150px;
 }
 
 @import "mobile";

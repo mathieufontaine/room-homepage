@@ -9,38 +9,39 @@ let sliderLength = sliderImg.length;
 
 let counter = 0;
 
+// startSlider();
+
+function nextSlide() {
+  sliderImg[counter].classList.remove("active");
+  sliderContent[counter].classList.remove("active");
+  counter++;
+
+  if (counter >= sliderLength) {
+    counter = 0;
+  }
+
+  sliderImg[counter].classList.add("active");
+  sliderContent[counter].classList.add("active");
+}
+
+function prevSlide() {
+  sliderImg[counter].classList.remove("active");
+  sliderContent[counter].classList.remove("active");
+  counter--;
+
+  if (counter < 0) {
+    counter = sliderLength - 1;
+  }
+
+  sliderImg[counter].classList.add("active");
+  sliderContent[counter].classList.add("active");
+}
+
 sliderImg[counter].classList.add("active");
 sliderContent[counter].classList.add("active");
 
-prevBtn.forEach(btn =>
-  btn.addEventListener("click", () => {
-    sliderImg[counter].classList.remove("active");
-    sliderContent[counter].classList.remove("active");
-    counter--;
-
-    if (counter < 0) {
-      counter = sliderLength - 1;
-    }
-
-    sliderImg[counter].classList.add("active");
-    sliderContent[counter].classList.add("active");
-  })
-);
-
-nextBtn.forEach(btn =>
-  btn.addEventListener("click", () => {
-    sliderImg[counter].classList.remove("active");
-    sliderContent[counter].classList.remove("active");
-    counter++;
-
-    if (counter >= sliderLength) {
-      counter = 0;
-    }
-
-    sliderImg[counter].classList.add("active");
-    sliderContent[counter].classList.add("active");
-  })
-);
+nextBtn.forEach(btn => btn.addEventListener("click", nextSlide));
+prevBtn.forEach(btn => btn.addEventListener("click", prevSlide));
 
 // menu toggler
 

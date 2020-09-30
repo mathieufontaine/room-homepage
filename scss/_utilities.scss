@@ -71,24 +71,6 @@ img {
   height: auto;
 }
 
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  background: $secondary-color;
-  color: #fff;
-  padding: 8px 30px;
-  font-weight: bold;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-.btn:hover {
-  background: $dark-gray;
-}
-
 .section {
   position: relative;
   padding: 0;
