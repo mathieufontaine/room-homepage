@@ -1,0 +1,103 @@
+@import url("https://fonts.google.com/specimen/Spartan");
+
+$primary-color: hsl(0, 0%, 100%);
+$secondary-color: hsl(0, 0%, 0%);
+$text-color: hsl(0, 0%, 63%);
+$dark-gray: hsl(0, 0%, 27%);
+
+html {
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: $primary-color;
+  color: $text-color;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main {
+  position: relative;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+  color: $secondary-color;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+p {
+  color: $text-color;
+  line-height: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  height: 100vh;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: $secondary-color;
+  color: #fff;
+  padding: 8px 30px;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: $dark-gray;
+}
+
+// .primary-text {
+//   color: $secondary-color;
+// }
+
+// .secondary-text {
+//   color: $secondary-color;
+// }
+
+.section {
+  position: relative;
+  padding: 0;
+}

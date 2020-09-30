@@ -1,0 +1,64 @@
+.navbar {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  height: 100px;
+  width: auto;
+  z-index: 1;
+  .nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .logo {
+      height: 100%;
+      padding: 20px;
+      margin-right: 30px;
+      a {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 20px 0;
+      margin: 0 20px;
+      &:hover {
+        border-bottom: 2px solid $primary-color;
+      }
+      .nav-link {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  height: 100px;
+  z-index: 1;
+  display: none;
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    a {
+      font-size: 2rem;
+      font-weight: 800;
+      color: $secondary-color;
+    }
+  }
+  svg {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: $secondary-color;
+  }
+}

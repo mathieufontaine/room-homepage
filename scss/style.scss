@@ -1,3 +1,109 @@
-body {
-  margin: 0;
+@import "utilities";
+@import "navbar";
+
+.showcase,
+.about {
+  display: grid;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
 }
+
+// showcase
+
+.showcase {
+  height: 65vh;
+  grid-template-columns: 3fr 2fr;
+  .showcase-img {
+    position: relative;
+    height: 100%;
+    .btn-container {
+      display: none;
+      right: 0;
+      left: auto;
+    }
+  }
+  .showcase-content {
+    position: relative;
+    height: 100%;
+    .content {
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 70px;
+    }
+  }
+}
+
+.show {
+  display: flex !important;
+}
+
+// about
+
+.about {
+  height: 35vh;
+  grid-template-columns: 3fr 4fr 3fr;
+  .text {
+    padding: 40px;
+  }
+}
+
+// images
+
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#img1 {
+  background-image: url("/public/img/desktop-image-hero-1.jpg");
+}
+#img2 {
+  background-image: url("/public/img/desktop-image-hero-2.jpg");
+}
+#img3 {
+  background-image: url("/public/img/desktop-image-hero-3.jpg");
+}
+#img4 {
+  background-image: url("/public/img/image-about-dark.jpg");
+}
+#img5 {
+  background-image: url("/public/img/image-about-light.jpg");
+}
+
+// buttons
+
+.btn-shop {
+  cursor: pointer;
+  padding: 20px 0;
+  margin-right: auto;
+  display: flex;
+  h3 {
+    margin-right: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 300;
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 50px;
+  width: 150px;
+}
+
+@import "mobile";
