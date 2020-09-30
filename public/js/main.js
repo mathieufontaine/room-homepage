@@ -3,16 +3,20 @@
 let prevBtn = document.querySelectorAll(".slider-prev");
 let nextBtn = document.querySelectorAll(".slider-next");
 
-let sliderImg = document.querySelectorAll(".showcase-img .slider-item");
+let sliderImg = document.querySelectorAll(
+  ".showcase-img .desktop .slider-item"
+);
+let sliderImgMobile = document.querySelectorAll(
+  ".showcase-img .mobile .slider-item"
+);
 let sliderContent = document.querySelectorAll(".showcase-content .slider-item");
-let sliderLength = sliderImg.length;
+let sliderLength = sliderContent.length;
 
 let counter = 0;
 
-// startSlider();
-
 function nextSlide() {
   sliderImg[counter].classList.remove("active");
+  sliderImgMobile[counter].classList.remove("active");
   sliderContent[counter].classList.remove("active");
   counter++;
 
@@ -21,11 +25,13 @@ function nextSlide() {
   }
 
   sliderImg[counter].classList.add("active");
+  sliderImgMobile[counter].classList.add("active");
   sliderContent[counter].classList.add("active");
 }
 
 function prevSlide() {
   sliderImg[counter].classList.remove("active");
+  sliderImgMobile[counter].classList.remove("active");
   sliderContent[counter].classList.remove("active");
   counter--;
 
@@ -34,10 +40,12 @@ function prevSlide() {
   }
 
   sliderImg[counter].classList.add("active");
+  sliderImgMobile[counter].classList.add("active");
   sliderContent[counter].classList.add("active");
 }
 
 sliderImg[counter].classList.add("active");
+sliderImgMobile[counter].classList.add("active");
 sliderContent[counter].classList.add("active");
 
 nextBtn.forEach(btn => btn.addEventListener("click", nextSlide));

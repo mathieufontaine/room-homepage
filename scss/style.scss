@@ -55,27 +55,9 @@
 // images
 
 .img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   width: 100%;
-}
-
-#img1 {
-  background-image: url("/public/img/desktop-image-hero-1.jpg");
-}
-#img2 {
-  background-image: url("/public/img/desktop-image-hero-2.jpg");
-}
-#img3 {
-  background-image: url("/public/img/desktop-image-hero-3.jpg");
-}
-#img4 {
-  background-image: url("/public/img/image-about-dark.jpg");
-}
-#img5 {
-  background-image: url("/public/img/image-about-light.jpg");
+  object-fit: cover;
 }
 
 @import "mobile";
