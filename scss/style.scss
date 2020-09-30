@@ -17,6 +17,7 @@
   .showcase-img {
     position: relative;
     height: 100%;
+    width: 100%;
     .btn-container {
       display: none;
       right: 0;
@@ -28,13 +29,36 @@
     height: 100%;
     .content {
       height: 100%;
-      display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: left;
       padding: 70px;
     }
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-item {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.showcase-img {
+  .slider-item.active {
+    display: block !important;
+  }
+}
+
+.showcase-content {
+  .slider-item.active {
+    display: flex !important;
   }
 }
 
