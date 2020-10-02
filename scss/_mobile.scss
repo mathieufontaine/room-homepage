@@ -20,8 +20,11 @@
   .desktop {
     display: none;
   }
+  h1 {
+    font-size: 2rem;
+  }
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .navbar {
     top: 0;
@@ -89,5 +92,28 @@
         display: none;
       }
     }
+  }
+}
+
+@media (max-width: 400px) {
+  p {
+    font-size: 1rem;
+  }
+  .showcase .showcase-content .content {
+    padding: 20px;
+  }
+  .btn-shop {
+    h3 {
+      letter-spacing: 2px;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+    &:hover h3 {
+      font-size: 1rem;
+      letter-spacing: 3px;
+    }
+  }
+  .about .text {
+    padding: 24px;
   }
 }
